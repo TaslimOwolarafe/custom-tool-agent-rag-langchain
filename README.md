@@ -86,9 +86,10 @@ from langchain_core.output_parsers import StrOutputParser
   A csv file with more than 20k lines will take hours.
   
   `data_chroma_db = Chroma.from_documents(data_docs[:100], embeddings, persist_directory="../data/100_chunk_chroma_db")`
+
 This line creates the vector database.
 
-But since I already created the database before, I can just load it from where it was saved.
+But since I already created the database, I can just load it from where it was saved.
 
 `data_chroma_db = Chroma(persist_directory="../data/100_chunk_chroma_db", embedding_function=embeddings)`
 
